@@ -1,10 +1,12 @@
 import express from "express";
 import { customAlphabet } from 'nanoid'
 const nanoid = customAlphabet('1234567890', 20)
+import cors from "cors";
 
 
 const app = express();
 app.use(express.json());
+app.use(cors({origin: "*"}))
 
 app.get("/", (req, res) => {
   res.send("hello world!");
@@ -163,6 +165,13 @@ app.delete("/product/:id", (req, res) => {
   }
 });
 
+
+
+
+const port = process.env.PORT || 3001;
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
 
 
 
