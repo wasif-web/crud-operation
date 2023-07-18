@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "9968fee7-c0b1-46cf-afab-772a5b51acc8",
+		"name": "Rest Api class",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28564446"
+	},
+	"item": [
+		{
+			"name": "get all products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"message\": \"all products\"\r\n\"data\":[\r\n    {\r\n        \"id\": 212342, \r\n    \"name\": \"abc product\",\r\n  \"price\": \"$23.12\",\r\n  \"description\": \"abc product description\"\r\n    }\r\n]\r\n\r\n\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/product/24234072890868901134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						"24234072890868901134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"pakistan\",\r\n    \"price\":\"$23\",\r\n    \"description\":\"this is description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put product",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone\",\r\n    \"price\":\"$23\",\r\n    \"description\":\"this is description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product/24234072890868901134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						"24234072890868901134"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"iphone\",\r\n    \"price\":\"$23\",\r\n    \"description\":\"this is description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/product/24234072890868901134",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"product",
+						"24234072890868901134"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
