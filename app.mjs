@@ -175,8 +175,8 @@ app.listen(port, () => {
 
 
 
-const PORT = process.env.PORT;
-app.listen(PORT, () => {
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
   console.log(`Example app listening on port ${PORT}`);
 });
 
