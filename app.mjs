@@ -30,10 +30,7 @@ app.get("/products", (req, res) => {
   });
 });
 
-//  https://baseurl.com/product/1231
 app.get("/product/:id", (req, res) => {
-  console.log(typeof req.params.id)
-
   if (isNaN(req.params.id)) {
     res.status(403).send("invalid product id")
   }
@@ -61,14 +58,6 @@ app.get("/product/:id", (req, res) => {
 });
 
 app.post("/product", (req, res) => {
-
-  // {
-  //   id: 212342, // always a number
-  //   name: "abc product",
-  //   price: "$23.12",
-  //   description: "abc product description"
-  // }
-
 
   if (!req.body.name
     || !req.body.price
@@ -168,18 +157,10 @@ app.delete("/product/:id", (req, res) => {
 
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3000; 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-
-
-
-const port =3000;
-app.listen(port, () => {
-  console.log(`Example app listening on port ${PORT}`);
-});
-
 
 
 
